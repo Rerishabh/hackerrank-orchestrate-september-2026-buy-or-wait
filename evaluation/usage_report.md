@@ -27,8 +27,8 @@
 
 ## Recommended Payment Method Distribution
 
-- `full_payment`: 63
+- `full_payment`: 62
 - `installments`: 58
 - `not_recommended`: 59
 - `partial_payment`: 10
-- `wait`: 60
+- `wait`: 61
