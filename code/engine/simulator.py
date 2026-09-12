@@ -44,6 +44,8 @@ class FinancialSimulator:
 				continue
 			effective_date = event.settlement_date or event.event_date
 			known_dates.add((event.category, event.direction, effective_date))
+			if event.direction.lower() in {"credit", "in", "income"} and event.status == "pending":
+				continue
 			if effective_date > self.request_date or (
 				effective_date == self.request_date and event.status != "settled"
 			):
