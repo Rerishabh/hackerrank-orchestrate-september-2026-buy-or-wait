@@ -50,8 +50,12 @@ class FinancialSimulator:
 				effective_date == self.request_date and event.status != "settled"
 			):
 				flows[effective_date] += self._signed_amount(event)
-			if event.status == "settled" and effective_date <= self.request_date:
-				grouped[(event.category, event.direction)].append(event)
+			if (event.status == "settled" and effective_date <= self.request_date) or (
+					event.status == "scheduled"
+					and event.category.lower() == "salary"
+					and event.direction.lower() in {"credit", "in", "income"}
+				):
+					grouped[(event.category, event.direction)].append(event)
 		for (category, direction), history in grouped.items():
 			if len(history) < 2:
 				continue

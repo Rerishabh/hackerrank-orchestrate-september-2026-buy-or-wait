@@ -4,7 +4,7 @@ request_27,6670,affordable_now,full_payment,2026-07-05:6670,2026-07-05,none,Pay 
 request_28,201.68,affordable_later,wait,2024-08-20:1302.40,2024-08-20,none,"Wait until 2024-08-20, when the full payment is forecast safe above the minimum balance."
 request_29,51524,affordable_now,full_payment,2025-11-04:51524,2025-11-04,none,Pay ZAR 51524 today while maintaining the minimum balance.
 request_30,775.2,affordable_with_plan,installments,2026-04-06:268.74|2026-05-06:268.74|2026-06-05:268.74,2026-04-06,none,Use 3 installments totaling USD 806.22 while maintaining the minimum balance.
-request_31,2809626.31,affordable_later,wait,2024-10-15:18164000,2024-10-15,none,"Wait until 2024-10-15, when the full payment is forecast safe above the minimum balance."
+request_31,2809626.31,affordable_later,wait,2024-11-15:18164000,2024-11-15,none,"Wait until 2024-11-15, when the full payment is forecast safe above the minimum balance."
 request_32,13511.27,not_affordable,not_recommended,none,,none,Do not proceed. Only ZAR 13511.27 is safe today while protecting the minimum balance.
 request_33,23864.51,not_affordable,not_recommended,none,,none,Do not proceed. Only INR 23864.51 is safe today while protecting the minimum balance.
 request_34,129400,affordable_now,full_payment,2024-12-04:129400,2024-12-04,none,Pay INR 129400 today while maintaining the minimum balance.
@@ -40,7 +40,7 @@ request_63,37321.52,not_affordable,not_recommended,none,,none,Do not proceed. On
 request_64,42632.76,affordable_with_plan,installments,2024-06-11:22082.67|2024-07-12:22082.67|2024-08-12:22082.67,2024-07-15,reduce_to:event_5951:950,Use 3 installments totaling INR 66248.01 while maintaining the minimum balance.
 request_65,5900.81,not_affordable,not_recommended,none,,none,Do not proceed. Only ZAR 5900.81 is safe today while protecting the minimum balance.
 request_66,22200,affordable_now,full_payment,2026-04-03:22200,2026-04-03,none,Pay INR 22200 today while maintaining the minimum balance.
-request_67,309.39,affordable_later,wait,2024-10-15:2094,2024-10-15,none,"Wait until 2024-10-15, when the full payment is forecast safe above the minimum balance."
+request_67,309.39,affordable_later,wait,2024-11-15:2094,2024-11-15,none,"Wait until 2024-11-15, when the full payment is forecast safe above the minimum balance."
 request_68,1327.79,affordable_with_plan,installments,2025-02-14:725.09|2025-03-14:725.09|2025-04-11:725.09,2025-03-23,reduce_to:event_6331:24.80,Use 3 installments totaling USD 2175.27 while maintaining the minimum balance.
 request_69,529.1,affordable_now,full_payment,2026-01-04:529.10,2026-01-04,none,Pay EUR 529.10 today while maintaining the minimum balance.
 request_70,50074.24,affordable_later,wait,2025-02-15:243900,2025-02-15,none,"Wait until 2025-02-15, when the full payment is forecast safe above the minimum balance."
@@ -73,7 +73,7 @@ request_96,74296.06,affordable_with_plan,installments,2026-01-10:31269.33|2026-0
 request_97,1564.81,affordable_with_plan,installments,2024-03-19:8145.28|2024-04-19:8145.28|2024-05-20:8145.28,2024-04-15,none,Use 3 installments totaling ZAR 24435.84 while maintaining the minimum balance.
 request_98,6487.77,affordable_later,wait,2025-10-15:27148,2025-10-15,none,"Wait until 2025-10-15, when the full payment is forecast safe above the minimum balance."
 request_99,17483.55,affordable_later,wait,2026-07-15:18062,2026-07-15,none,"Wait until 2026-07-15, when the full payment is forecast safe above the minimum balance."
-request_100,25097.79,affordable_with_plan,installments,2024-06-13:12866.19|2024-07-14:12866.19|2024-08-14:12866.19,2024-06-15,none,Use 3 installments totaling ZAR 38598.57 while maintaining the minimum balance.
+request_100,25097.79,affordable_with_plan,installments,2024-06-13:12866.19|2024-07-14:12866.19|2024-08-14:12866.19,2024-08-15,reduce_to:event_9267:508.20|stop:event_9268,Use 3 installments totaling ZAR 38598.57 while maintaining the minimum balance.
 request_101,143500,affordable_now,full_payment,2025-11-03:143500,2025-11-03,none,Pay INR 143500 today while maintaining the minimum balance.
 request_102,1716,affordable_with_plan,installments,2026-04-05:594.88|2026-05-05:594.88|2026-06-04:594.88,2026-04-05,none,Use 3 installments totaling EUR 1784.64 while maintaining the minimum balance.
 request_103,4764.72,not_affordable,not_recommended,none,,none,Do not proceed. Only INR 4764.72 is safe today while protecting the minimum balance.
@@ -163,9 +163,9 @@ request_186,3735.01,not_affordable,not_recommended,none,,none,Do not proceed. On
 request_187,37452.85,affordable_later,wait,2024-11-15:187500,2024-11-15,none,"Wait until 2024-11-15, when the full payment is forecast safe above the minimum balance."
 request_188,97.44,not_affordable,not_recommended,none,,none,Do not proceed. Only EUR 97.44 is safe today while protecting the minimum balance.
 request_189,488.4,affordable_now,full_payment,2026-07-04:488.40,2026-07-04,none,Pay EUR 488.40 today while maintaining the minimum balance.
-request_190,530.45,affordable_later,wait,2024-12-15:2557.50,2024-12-15,none,"Wait until 2024-12-15, when the full payment is forecast safe above the minimum balance."
+request_190,530.45,affordable_later,wait,2025-02-15:2557.50,2025-02-15,none,"Wait until 2025-02-15, when the full payment is forecast safe above the minimum balance."
 request_191,664.4,affordable_now,full_payment,2025-05-03:664.40,2025-05-03,none,Pay EUR 664.40 today while maintaining the minimum balance.
-request_192,214.09,affordable_later,wait,2026-04-29:2046,2026-04-29,none,"Wait until 2026-04-29, when the full payment is forecast safe above the minimum balance."
+request_192,162.55,not_affordable,not_recommended,none,,none,Do not proceed. Only USD 162.55 is safe today while protecting the minimum balance.
 request_193,34.69,affordable_with_plan,installments,2024-03-21:420.23|2024-04-21:420.23|2024-05-22:420.23,2024-03-15,none,Use 3 installments totaling EUR 1260.69 while maintaining the minimum balance.
 request_194,34115.95,affordable_later,wait,2025-10-23:132800,2025-10-23,none,"Wait until 2025-10-23, when the full payment is forecast safe above the minimum balance."
 request_195,961.15,affordable_with_plan,installments,2026-01-09:405.74|2026-02-08:405.74|2026-03-10:405.74,2026-02-15,reduce_to:event_17955:12|reduce_to:event_17957:13,Use 3 installments totaling EUR 1217.22 while maintaining the minimum balance.
@@ -184,13 +184,13 @@ request_207,4550.44,affordable_later,wait,2026-07-15:11830,2026-07-15,none,"Wait
 request_208,3131982.89,affordable_later,wait,2024-06-15:4413000,2024-06-15,none,"Wait until 2024-06-15, when the full payment is forecast safe above the minimum balance."
 request_209,1718.56,not_affordable,not_recommended,none,,none,Do not proceed. Only ZAR 1718.56 is safe today while protecting the minimum balance.
 request_210,984.62,affordable_with_plan,installments,2026-04-06:471.48|2026-05-04:471.48|2026-06-01:471.48,2026-04-15,none,Use 3 installments totaling USD 1414.44 while maintaining the minimum balance.
-request_211,283.61,affordable_later,wait,2024-10-15:1788.60,2024-10-15,none,"Wait until 2024-10-15, when the full payment is forecast safe above the minimum balance."
+request_211,283.61,affordable_later,wait,2024-11-15:1788.60,2024-11-15,none,"Wait until 2024-11-15, when the full payment is forecast safe above the minimum balance."
 request_212,3736044.19,not_affordable,not_recommended,none,,none,Do not proceed. Only IDR 3736044.19 is safe today while protecting the minimum balance.
 request_213,3362.4,affordable_with_plan,installments,2026-01-21:1165.63|2026-02-20:1165.63|2026-03-22:1165.63,2026-01-07,none,Use 3 installments totaling USD 3496.89 while maintaining the minimum balance.
 request_214,40598.45,affordable_with_plan,partial_payment,2024-12-04:40598.45|2024-12-15:29151.55,2024-12-15,none,Pay INR 40598.45 today and the remainder on 2024-12-15 while maintaining the minimum balance.
 request_215,29986,affordable_with_plan,installments,2025-05-09:10395.15|2025-06-06:10395.15|2025-07-04:10395.15,2025-05-06,none,Use 3 installments totaling ZAR 31185.45 while maintaining the minimum balance.
 request_216,483.95,not_affordable,not_recommended,none,,none,Do not proceed. Only USD 483.95 is safe today while protecting the minimum balance.
-request_217,19561.8,affordable_with_plan,installments,2024-03-19:12889.07|2024-04-19:12889.07|2024-05-20:12889.07,2024-03-15,none,Use 3 installments totaling ZAR 38667.21 while maintaining the minimum balance.
+request_217,19561.8,affordable_with_plan,installments,2024-03-19:12889.07|2024-04-19:12889.07|2024-05-20:12889.07,2024-05-15,none,Use 3 installments totaling ZAR 38667.21 while maintaining the minimum balance.
 request_218,24316753.13,affordable_with_plan,installments,2025-08-07:21195893.33|2025-09-04:21195893.33|2025-10-02:21195893.33,2025-09-15,none,Use 3 installments totaling IDR 63587679.99 while maintaining the minimum balance.
 request_219,0,not_affordable,not_recommended,none,,none,Do not proceed. Only EUR 0 is safe today while protecting the minimum balance.
 request_220,66.11,not_affordable,not_recommended,none,,none,Do not proceed. Only EUR 66.11 is safe today while protecting the minimum balance.
@@ -243,7 +243,7 @@ request_266,774.9,affordable_with_plan,installments,2025-08-03:324.13|2025-08-31
 request_267,1632.54,affordable_with_plan,installments,2026-01-08:667.33|2026-02-07:667.33|2026-03-09:667.33,2026-02-15,stop:event_24573,Use 3 installments totaling EUR 2001.99 while maintaining the minimum balance.
 request_268,1035.8,affordable_with_plan,installments,2024-06-14:841.22|2024-07-15:841.22|2024-08-15:841.22,2024-07-15,none,Use 3 installments totaling EUR 2523.66 while maintaining the minimum balance.
 request_269,0,not_affordable,not_recommended,none,,none,Do not proceed. Only ZAR 0 is safe today while protecting the minimum balance.
-request_270,175.19,not_affordable,not_recommended,none,2026-08-10,none,Do not proceed. Only USD 175.19 is safe today while protecting the minimum balance.
+request_270,98.79,not_affordable,not_recommended,none,,none,Do not proceed. Only USD 98.79 is safe today while protecting the minimum balance.
 request_271,5278.26,affordable_later,wait,2024-11-20:91300,2024-11-20,none,"Wait until 2024-11-20, when the full payment is forecast safe above the minimum balance."
 request_272,5426190.15,affordable_with_plan,installments,2025-02-12:4709466.67|2025-03-12:4709466.67|2025-04-09:4709466.67,2025-03-15,none,Use 3 installments totaling IDR 14128400.01 while maintaining the minimum balance.
 request_273,9543524.88,affordable_with_plan,partial_payment,2026-04-07:9543524.88|2026-04-15:6317475.12,2026-04-15,none,Pay IDR 9543524.88 today and the remainder on 2026-04-15 while maintaining the minimum balance.

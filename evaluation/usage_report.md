@@ -29,6 +29,6 @@
 
 - `full_payment`: 62
 - `installments`: 58
-- `not_recommended`: 59
+- `not_recommended`: 60
 - `partial_payment`: 10
-- `wait`: 61
+- `wait`: 60
