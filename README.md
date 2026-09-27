@@ -393,7 +393,7 @@ Concrete monitoring signals and production tripwires
 
 
 The intended architecture would be:
-
+```
 Model proposes
       ↓
 Deterministic tools verify
@@ -401,7 +401,7 @@ Deterministic tools verify
 Validator enforces
       ↓
 Structured output
-
+```
 ### Disclaimer
 
 This project was developed as a hackathon submission for educational and demonstration purposes.
