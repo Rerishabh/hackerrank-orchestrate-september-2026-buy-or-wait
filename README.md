@@ -243,23 +243,23 @@ The final submission was evaluated across the submitted code, generated output, 
 
 ### Final Leaderboard Result
 
+```
 Metric	     Result
 
 Final Rank	#1504 / 3,062
 Total Score	 40.6 / 100
-
-
-View the HackerRank Leaderboard
+```
 
 ### Score Breakdown
 
+```
 Component	           Score	Max Possible
 
 Chat Transcript	 6.4	     10
 AI Judge Interview	 18.9	30
 Output CSV	      12.3	30
 Code ZIP  	      3.0	     30
-
+```
 
 Detailed execution metrics and model usage are available in evaluation/usage_report.md.
 
