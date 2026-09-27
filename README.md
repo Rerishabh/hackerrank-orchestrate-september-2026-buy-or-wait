@@ -144,20 +144,32 @@ A deterministic validation layer checks output constraints including amount boun
 The primary generated file is output.csv.
 
 Each request produces one structured prediction row.
-
-Required Columns
-
-Column	Description
 ```
-request_id	Unique identifier of the request
-amount_safe_to_pay	Maximum amount that can safely be paid on the request date
-affordability_status	Overall affordability classification
-recommended_payment_method	Recommended payment approach
-payment_plan	Chronological payment schedule
-earliest_date_for_full_payment	Earliest forecast date on which full payment is safe
-spending_changes_needed	Permitted changes to flexible recurring expenses
-decision_explanation	Explanation of the decision and relevant financial factors
+### Required Columns
 
+- `request_id`  
+  Unique identifier of the request.
+
+- `amount_safe_to_pay`  
+  Maximum amount that can safely be paid on the request date.
+
+- `affordability_status`  
+  Overall affordability classification.
+
+- `recommended_payment_method`  
+  Recommended payment approach.
+
+- `payment_plan`  
+  Chronological payment schedule.
+
+- `earliest_date_for_full_payment`  
+  Earliest forecast date on which full payment is safe.
+
+- `spending_changes_needed`  
+  Permitted changes to flexible recurring expenses.
+
+- `decision_explanation`  
+  Explanation of the decision and relevant financial factors.
 ```
 ### Partial Payment Logic
 
