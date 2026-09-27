@@ -210,31 +210,31 @@ This public repository contains the project implementation, documentation, evalu
 The solution expects the challenge dataset to be available locally in a dataset/ directory.
 
 With the dataset available locally, run:
-
+```
 python code/main.py
-
+```
 Predictions will be written to:
-
+```
 output.csv
-
+```
 ### Environment Setup
 
 Create a virtual environment:
-
+```
 python -m venv .venv
-
-Windows
-
+```
+### Windows
+```
 .venv\Scripts\activate
-
-macOS/Linux
-
+```
+### macOS/Linux
+```
 source .venv/bin/activate
-
+```
 Install the project's required dependencies according to its Python configuration, then run:
-
+```
 python code/main.py
-
+```
 ### Evaluation & Results
 
 The project was submitted to HackerRank Orchestrate September 2026.
@@ -360,15 +360,15 @@ A future implementation should validate inputs early, validate model output stru
 
 ### Limitations
 
-The project was developed under a 24-hour hackathon constraint.
+- The project was developed under a 24-hour hackathon constraint.
 
-The original challenge dataset is not included in this public repository.
+- The original challenge dataset is not included in this public repository.
 
-The submitted September 2026 implementation primarily uses deterministic planning and simulation rather than a fully model-driven agent loop.
+- The submitted September 2026 implementation primarily uses deterministic planning and simulation rather than a fully     model-driven agent loop.
 
-The system was designed for the challenge environment and has not been validated for real-world financial applications.
+- The system was designed for the challenge environment and has not been validated for real-world financial applications.
 
-Financial decisions can depend on information that is unavailable, incomplete, delayed, or incorrectly represented in the available data.
+- Financial decisions can depend on information that is unavailable, incomplete, delayed, or incorrectly represented in    the available data.
 
 
 ### Future Improvements
@@ -395,7 +395,7 @@ Financial decisions can depend on information that is unavailable, incomplete, d
 
 - More comprehensive regression tests
 
-Concrete monitoring signals and production tripwires
+- Concrete monitoring signals and production tripwires
 
 
 The intended architecture would be:
