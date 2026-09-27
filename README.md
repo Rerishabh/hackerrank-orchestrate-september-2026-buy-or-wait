@@ -145,7 +145,7 @@ The primary generated file is output.csv.
 
 Each request produces one structured prediction row.
 
-### Required Columns
+**Required Columns**
 ```
 - `request_id`  
   Unique identifier of the request.
