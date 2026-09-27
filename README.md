@@ -193,7 +193,7 @@ output.csv: Generated predictions produced by the engine.
 AGENTS.md and CLAUDE.md: AI-assisted development instructions and project guidelines.
 
 
-Dataset
+### Dataset
 
 The original HackerRank challenge dataset is not included in this public repository.
 
@@ -311,33 +311,33 @@ Safety Validation
        ▼
 Consistent Structured Output
 
-Key Feedback Themes
+### Key Feedback Themes
 
-1. Model-Driven Decision Making
+1. **Model-Driven Decision Making**
 
 The submitted workflow relied primarily on predefined planning and simulation logic. A future version should allow the model to select actions and invoke deterministic tools rather than only executing a fixed workflow.
 
-2. Evidence Extraction
+2. **Evidence Extraction**
 
 A future agent should be able to extract relevant evidence from messy inputs such as messages and images using dedicated tools.
 
-3. Output Consistency
+3. **Output Consistency**
 
 The amount_safe_to_pay, affordability_status, payment_plan, earliest_date_for_full_payment, spending_changes_needed, and decision_explanation fields should all be derived from the same underlying validated plan.
 
-4. Flexible Expense Modeling
+4. **Flexible Expense Modeling**
 
 Stop/reduce changes to flexible expenses should be modeled directly inside the financial forecast. The forecast should then be recomputed before determining the safe-to-pay amount and final status.
 
-5. Safety Under Uncertainty
+5. **Safety Under Uncertainty**
 
 The system should explicitly define how missing or uncertain evidence is handled, including when assumptions are allowed and when the system should return an insufficient-evidence outcome.
 
-6. Reliability
+6. **Reliability**
 
 A future implementation should validate inputs early, validate model output structure, use bounded retries and fallbacks, and ensure that one failed request does not break the entire run.
 
-Engineering Takeaways
+### Engineering Takeaways
 
 Financial Decisions Require Forecasting: Current balance alone is insufficient when future income, pending transactions, recurring expenses, and minimum-balance requirements affect liquidity.
 
@@ -352,7 +352,7 @@ Explicit Specifications Improve AI-Assisted Development: Defining formulas, thre
 Concrete Debugging Evidence Matters: Providing exact failing request IDs, incorrect fields, expected behavior, and observed output makes debugging more precise.
 
 
-Limitations
+### Limitations
 
 The project was developed under a 24-hour hackathon constraint.
 
@@ -365,7 +365,7 @@ The system was designed for the challenge environment and has not been validated
 Financial decisions can depend on information that is unavailable, incomplete, delayed, or incorrectly represented in the available data.
 
 
-Future Improvements
+### Future Improvements
 
 Based on the post-submission feedback, a future version could introduce:
 
@@ -402,19 +402,9 @@ Validator enforces
       ↓
 Structured output
 
-Disclaimer
+### Disclaimer
 
 This project was developed as a hackathon submission for educational and demonstration purposes.
 
 It is not a financial advisory tool and should not be used for real-world financial decision-making.
 
-Author
-
-Rishabh Paira
-
-GitHub: @Rerishabh
-
-Project: HackerRank Orchestrate September 2026: Buy or Wait
-
-
-**This is the version I recommend you use now.** It documents what you actually built, your verified result, the leaderboard, and the post-hackathon feedback without claiming that the submitted code was more agentic than HackerRank's own review says it was. The internal repository links are also relative, so they work properly when the repository is browsed or cloned. 1
