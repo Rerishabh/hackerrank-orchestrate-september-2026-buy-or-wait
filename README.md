@@ -257,25 +257,25 @@ The project was submitted to HackerRank Orchestrate September 2026.
 
 The final submission was evaluated across the submitted code, generated output, AI chat transcript, and AI Judge interview. HackerRank describes these as separate signals used to evaluate Orchestrate submissions.
 
-### Final Leaderboard Result
+## Final Leaderboard Result
 
-```
-Metric	     Result
+| Metric | Result |
+| --- | --- |
+| **Final Rank** | **#1504 / 3,062** |
+| **Total Score** | **40.6 / 100** |
 
-Final Rank	#1504 / 3,062
-Total Score	 40.6 / 100
-```
+[View the HackerRank Leaderboard](https://www.hackerrank.com/contests/hackerrank-orchestrate-september26/challenges/buy-or-wait/leaderboard?username=ap24110010666)
 
-### Score Breakdown
+## Score Breakdown
 
-```
-Component	            Score	      Max Possible
+| Component | Score | Max Possible |
+| --- | ---: | ---: |
+| Chat Transcript | 6.4 | 10 |
+| AI Judge Interview | 18.9 | 30 |
+| Output CSV | 12.3 | 30 |
+| Code ZIP | 3.0 | 30 |
 
-Chat Transcript	  6.4	      10
-AI Judge Interview	  18.9	      30
-Output CSV	       12.3	      30
-Code ZIP  	       3.0	      30
-```
+Detailed execution metrics and model usage are available in [evaluation/usage_report.md](evaluation/usage_report.md).
 
 Detailed execution metrics and model usage are available in evaluation/usage_report.md.
 
