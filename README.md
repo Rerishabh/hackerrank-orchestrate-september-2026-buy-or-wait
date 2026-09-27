@@ -1,193 +1,420 @@
-# HackerRank Orchestrate
+# HackerRank Orchestrate September 2026: Buy or Wait?
 
-Starter repository for the **HackerRank Orchestrate** 24-hour hackathon (September 2026).
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
+[![HackerRank](https://img.shields.io/badge/HackerRank-Orchestrate-green)](https://www.hackerrank.com/hackerrank-orchestrate-september26)
 
-## Buy or Wait?
+> Financial affordability decision engine built for the HackerRank Orchestrate September 2026 24-hour hackathon. The system reconstructs a user's financial state, forecasts future cash flow, evaluates payment options, and produces a structured affordability decision.
 
-Build an AI-powered financial agent that decides whether a user can safely afford a requested expense.
+## Overview
 
-A user may ask: **"Can I afford this laptop?"**
+A simple question such as:
 
-Answering well takes more than the current balance. The agent must account for recurring expenses, pending payments, essential spending, confirmed income, available payment options, and relevant details buried in messages and images.
+> **"Can I afford this laptop?"**
 
-For every request, the agent decides whether the user should pay in full, pay partially, use installments, wait, or not proceed. The recommendation must be personalized: two users with the same balance can deserve different answers based on their commitments, priorities, payment preferences, and willingness to adjust flexible expenses.
+requires more than checking the user's current bank balance.
 
-A recommendation is safe only if the user can complete the full payment plan, cover essential expenses, and stay above their preferred minimum balance throughout the forecast period.
+A reliable affordability decision can depend on:
 
-Read [`problem_statement.md`](./problem_statement.md) for the full task spec, input/output schema, allowed values, conflict-resolution rules, and submission format.
+- Current available balance
+- Minimum preferred balance
+- Recurring expenses
+- Pending transactions
+- Confirmed income
+- Future financial commitments
+- Essential spending
+- Payment and installment options
+- User preferences
+- Supporting information in messages
+- Financial evidence in images
 
----
+The system combines these financial factors to produce a structured affordability decision.
 
-## Quick Start
+### Decision Categories
 
-Clone the repository and move into the project directory:
+**Affordability Status**
 
-```bash
-git clone https://github.com/interviewstreet/hackerrank-orchestrate-september26.git
-cd hackerrank-orchestrate-september26
-```
+- `affordable_now`
+- `affordable_with_plan`
+- `affordable_later`
+- `not_affordable`
 
-Build your solution in `code/main.py`, or use another language and document its entry point clearly.
+**Recommended Payment Method**
 
-Your solution must:
+- `full_payment`
+- `partial_payment`
+- `installments`
+- `wait`
+- `not_recommended`
 
-- Read the input files from `dataset/`
-- Generate one prediction for every request
-- Write the final predictions to `output.csv` in the repository root
+## Challenge
 
-Run the starter Python entry point with:
+This project was developed for **HackerRank Orchestrate September 2026**, a 24-hour hackathon focused on designing, building, and shipping an AI agent.
 
-```bash
-python3 code/main.py
-```
+The challenge started on **September 12, 2026 at 6:00 PM IST**. HackerRank describes Orchestrate as a challenge where participants submit their code, agent output, and AI chat transcript, followed by an AI Judge interview. 
 
-After running your solution, confirm that `output.csv` exists in the repository root and contains the required columns and one row for every request.
+### Official Challenge
 
-## Important File Locations
+[HackerRank Orchestrate September 2026](https://www.hackerrank.com/hackerrank-orchestrate-september26)
+
+### My Leaderboard Result
+
+[View My Buy or Wait Leaderboard Result](https://www.hackerrank.com/contests/hackerrank-orchestrate-september26/challenges/buy-or-wait/leaderboard?username=ap24110010666)
+
+## Approach
+
+The submitted solution treats affordability as a **financial forecasting problem** across a 90-day horizon rather than as a static day-0 balance check.
 
 ```text
-dataset/        Input data and the blank output template. Do not modify the input data.
-code/           Your solution code.
-output.csv      Final generated predictions in the repository root.
-code.zip        ZIP file containing your complete solution for submission.
-```
+User Request
+     │
+     ▼
+Financial Context
+     ├── Financial Profile
+     ├── Financial Events
+     ├── Recurring Expenses
+     ├── Pending Transactions
+     ├── Confirmed Income
+     ├── Messages
+     ├── Supporting Evidence
+     └── Payment Options
+     │
+     ▼
+Financial State Reconstruction
+     │
+     ▼
+Future Cash-Flow Forecast
+     │
+     ▼
+Affordability Calculation
+     │
+     ▼
+Payment Plan / Spending Change Analysis
+     │
+     ▼
+Deterministic Validation
+     │
+     ▼
+Structured Output
 
-The blank template at `dataset/output.csv` is provided as a reference. Your final generated file must be the root-level `output.csv`.
+Key Decision Logic
 
----
+1. Reconstruct the Financial State
 
-## Repository Layout
+The system aggregates available financial information for each user, including current balance, minimum balance thresholds, recurring commitments, pending transactions, confirmed income, and user preferences.
 
-```text
+
+2. Forecast Future Cash Flow
+
+Affordability is evaluated across the forecast horizon. The system checks whether the projected balance remains above the required minimum balance.
+
+
+3. Protect Essential Spending
+
+A purchase is not considered safe simply because sufficient funds exist today. Required financial commitments and essential recurring expenses must be considered before approving a purchase.
+
+
+4. Evaluate Payment Options
+
+When full payment is not immediately safe, the system evaluates alternatives such as partial payment, installment schedules, or delayed execution.
+
+
+5. Evaluate Flexible Spending Changes
+
+When permitted flexible recurring expenses exist, the system can consider changes such as:
+
+stop:<event_id>
+
+reduce_to:<event_id>:<amount>
+
+
+These changes can alter the future cash-flow trajectory and therefore affect affordability.
+
+
+6. Validate the Final Decision
+
+A deterministic validation layer checks output constraints including amount bounds, payment schedules, date consistency, and output schema compliance.
+
+
+
+Output Format
+
+The primary generated file is output.csv.
+
+Each request produces one structured prediction row.
+
+Required Columns
+
+Column	Description
+
+request_id	Unique identifier of the request
+amount_safe_to_pay	Maximum amount that can safely be paid on the request date
+affordability_status	Overall affordability classification
+recommended_payment_method	Recommended payment approach
+payment_plan	Chronological payment schedule
+earliest_date_for_full_payment	Earliest forecast date on which full payment is safe
+spending_changes_needed	Permitted changes to flexible recurring expenses
+decision_explanation	Explanation of the decision and relevant financial factors
+
+
+Partial Payment Logic
+
+When partial payment is permitted and safe, the payment schedule contains exactly two payments formatted as:
+
+request_date:amount|earliest_date:amount
+
+Example:
+
+2026-09-12:5000|2026-09-25:7000
+
+Repository Structure
+
 .
-├── AGENTS.md                         # Rules for AI coding tools + transcript logging
-├── problem_statement.md              # Full challenge statement
-├── README.md                         # You are here
-├── code/                             # Your solution code
-├── output.csv                        # Final generated predictions
-└── dataset/
-    ├── requests.csv                  # 250 requests to evaluate — predict these
-    ├── output.csv                    # Blank submission template
-    ├── sample_requests.csv           # 25 solved examples
-    ├── financial_profiles.csv        # Balances, minimum balance, priorities, preferences
-    ├── financial_events.csv          # Historical, pending, and confirmed transactions
-    ├── request_payment_options.csv   # Payment options available per request
-    ├── exchange_rates.csv            # Fixed, dated conversion rates
-    ├── messages.csv                  # Messages tied to users, requests, or events
-    ├── images.csv                    # Payroll letters, statements, bills, receipts
-    └── media/
-        └── images/
-```
+├── code/
+│   ├── main.py
+│   ├── engine/
+│   └── evaluation/
+├── evaluation/
+│   └── usage_report.md
+├── AGENTS.md
+├── CLAUDE.md
+├── README.md
+├── problem_statement.md
+├── output.csv
+└── .gitignore
 
-Only `dataset/requests.csv` requires predictions. Everything else is context. Join user records with `user_id`, request records with `request_id`, supporting evidence with `related_event_id`, and exchange rates with the rate date and currency pair.
+code/: Implementation of the financial decision engine, simulation pipeline, and execution scripts.
 
-Amounts are in the user's `home_currency` — the dataset uses INR, ZAR, IDR, USD, and EUR, and every conversion rate you need is in `exchange_rates.csv`. All dates are `YYYY-MM-DD`. Live exchange rates, market data, and banking access are not required.
+evaluation/usage_report.md: Model call counts, token usage, and execution cost documentation.
 
----
+problem_statement.md: Challenge specification reference.
 
-## What You Need to Build
+output.csv: Generated predictions produced by the engine.
 
-For every row in `dataset/requests.csv`, produce one row in `output.csv` with:
+AGENTS.md and CLAUDE.md: AI-assisted development instructions and project guidelines.
 
-| Column | Meaning |
-|---|---|
-| `request_id` | The request being answered |
-| `amount_safe_to_pay` | Largest amount safe to pay on `request_date` before optional spending changes, after protecting essentials and the minimum balance |
-| `affordability_status` | `affordable_now`, `affordable_with_plan`, `affordable_later`, or `not_affordable` |
-| `recommended_payment_method` | `full_payment`, `partial_payment`, `installments`, `wait`, or `not_recommended` |
-| `payment_plan` | Chronological `<YYYY-MM-DD>:<amount>` entries joined by `\|`, or `none` |
-| `earliest_date_for_full_payment` | Earliest date the full amount is forecast safe as one payment; empty if never within the forecast |
-| `spending_changes_needed` | Up to three `stop:<event_id>` / `reduce_to:<event_id>:<amount>` changes joined by `\|`, or `none` |
-| `decision_explanation` | Short explanation and the financial facts behind it |
 
-`0 <= amount_safe_to_pay <= requested_amount` must always hold. Installment plans must exactly match a supplied payment option, and only recurring expenses marked flexible may be changed.
+Dataset
 
-`affordable_with_plan` means the full request is completed through a partial-payment schedule, installments, or permitted spending changes. Recommend `partial_payment` only when the request allows it, the user accepts it, `0 < amount_safe_to_pay < requested_amount`, and `earliest_date_for_full_payment` is on or before `desired_completion_date`. Use exactly two payments: pay `amount_safe_to_pay` on `request_date`, then pay the remaining amount on `earliest_date_for_full_payment`. The two payments must add up to `requested_amount`. Unlike installments, partial payment does not need to match a supplied payment option.
+The original HackerRank challenge dataset is not included in this public repository.
 
----
+The challenge data contained financial profiles, transaction histories, requests, sample data, and supporting media.
 
-## Suggested Workflow
+Raw dataset assets are maintained separately in a private backup repository for preservation purposes.
 
-1. Inspect `dataset/sample_requests.csv` — 25 requests with completed output columns — to understand the expected format and decision style.
-2. Reconstruct each user's financial state from `financial_profiles.csv` and `financial_events.csv`: separate recurring expenses from one-time events, reserve pending transactions, count confirmed salary only on its settlement date, and de-duplicate repeated representations of the same event.
-3. When an event has a blank `amount`, find its `event_id` as `related_event_id` in `images.csv` and extract the amount from the linked image. Never treat a blank amount as zero. Pull in any other relevant messages, images, and payment options for the request.
-4. Forecast forward and generate a plan that keeps the balance above the minimum at every step.
-5. Verify deterministically — bounds, plan feasibility, schedule match, flexible-only spending changes — before writing `output.csv`.
-6. Score yourself on the solved samples, then run the full dataset.
+This public repository contains the project implementation, documentation, evaluation reports, and generated output.
 
-You may use any language or runtime. Python, JavaScript, and TypeScript are all reasonable choices.
+Running the Project
 
----
+The solution expects the challenge dataset to be available locally in a dataset/ directory.
 
-## Requirements
+With the dataset available locally, run:
 
-Your solution must:
+python code/main.py
 
-- be runnable from the terminal
-- read the provided files from `dataset/`
-- produce a valid `output.csv` with the exact required columns in the exact required order
-- include one prediction for every `request_id` in `dataset/requests.csv`
-- not use organizer-only files or hardcoded labels
-- keep behavior deterministic where possible
+Predictions will be written to:
 
-If you use API keys or secrets, read them from environment variables. Never hardcode secrets in the repo.
+output.csv
 
----
+Environment Setup
 
-## Evaluation
+Create a virtual environment:
 
-Your `output.csv` will be compared against hidden ground-truth values.
+python -m venv .venv
 
-The scoring will consider:
+Windows
 
-- accuracy of `amount_safe_to_pay`
-- correctness of `affordability_status`
-- correctness of `recommended_payment_method` and `payment_plan`
-- accuracy of `earliest_date_for_full_payment`
-- validity of `spending_changes_needed`
-- usefulness and consistency of `decision_explanation`
+.venv\Scripts\activate
 
-### Token Usage And Cost Analysis
+macOS/Linux
 
-Your `code.zip` must include one token-usage file:
+source .venv/bin/activate
 
-```text
-evaluation/usage_report.md
-```
+Install the project's required dependencies according to its Python configuration, then run:
 
-The report must cover model providers and names, model calls, input and output tokens, total and average tokens per request, estimated total and per-request cost. The reported values must correspond to the final full-dataset run that produced your `output.csv`.
+python code/main.py
 
----
+Evaluation & Results
 
-## Chat Transcript Logging
+The project was submitted to HackerRank Orchestrate September 2026.
 
-This repo includes an [`AGENTS.md`](./AGENTS.md) file for AI coding tools. It asks compatible tools to append conversation summaries to a `log.txt` in the repository root — the same directory as `AGENTS.md`:
+The final submission was evaluated across the submitted code, generated output, AI chat transcript, and AI Judge interview. HackerRank describes these as separate signals used to evaluate Orchestrate submissions.
 
-| Platform | Path |
-|---|---|
-| macOS / Linux | `<repo root>/log.txt` |
-| Windows | `<repo root>\log.txt` |
+Final Leaderboard Result
 
-The path resolves relative to `AGENTS.md`, so it stays correct across clones, renames, and checkouts. `log.txt` is gitignored — upload it as your chat transcript at submission time. Do not paste secrets into the chat.
+Metric	Result
 
-In case, the harness you are using is not in the repo root, you can explicitly ask the agent to look for the AGENTS.md in this folder & then continue.
+Final Rank	#1504 / 3,062
+Total Score	40.6 / 100
 
----
 
-## Submission
+View the HackerRank Leaderboard
 
-Submit the following files as instructed by HackerRank:
+Score Breakdown
 
-| File | Description |
-|---|---|
-| `code.zip` | Full runnable solution, prompts/configuration, README, and the required `evaluation/` folder |
-| `output.csv` | Predictions for every row in `dataset/requests.csv` |
-| `chat_transcript` | The `log.txt` described above, showing how you developed or used the system |
+Component	Score	Max Possible
 
-Before submitting, confirm:
+Chat Transcript	6.4	10
+AI Judge Interview	18.9	30
+Output CSV	12.3	30
+Code ZIP	3.0	30
 
-- `output.csv` has one row per row in `dataset/requests.csv` (250 rows plus the header).
-- `output.csv` has the exact required columns in the exact required order.
-- Every `amount_safe_to_pay` satisfies `0 <= amount_safe_to_pay <= requested_amount`.
-- Every installment plan matches a supplied payment option, and every spending change targets a flexible recurring expense.
-- Your runnable code, setup instructions, and `evaluation/` folder are included in `code.zip`.
+
+Detailed execution metrics and model usage are available in evaluation/usage_report.md.
+
+HackerRank Post-Submission Feedback
+
+HackerRank provided detailed feedback after evaluating the submission.
+
+The main architectural feedback was that the submitted implementation was primarily a deterministic solver, rather than a model-driven agent.
+
+HackerRank recommended keeping the existing deterministic loader, planner, and simulator as tools, while adding an agent loop capable of:
+
+1. Extracting evidence from messages and images.
+
+
+2. Deciding what action to take under uncertainty.
+
+
+3. Proposing candidate plans.
+
+
+4. Calling deterministic simulation tools to verify minimum-balance safety.
+
+
+5. Validating the final structured output before writing the CSV.
+
+
+
+The recommended architecture can therefore be summarized as:
+
+Financial Inputs
+       │
+       ▼
+   AI Agent
+       │
+       ├── Evidence Extraction
+       │
+       ├── Decision Making
+       │
+       ├── Candidate Plan
+       │
+       ▼
+Deterministic Tools
+       │
+       ├── Financial State Loader
+       ├── Planner
+       └── Cash-Flow Simulator
+       │
+       ▼
+Safety Validation
+       │
+       ▼
+Consistent Structured Output
+
+Key Feedback Themes
+
+1. Model-Driven Decision Making
+
+The submitted workflow relied primarily on predefined planning and simulation logic. A future version should allow the model to select actions and invoke deterministic tools rather than only executing a fixed workflow.
+
+2. Evidence Extraction
+
+A future agent should be able to extract relevant evidence from messy inputs such as messages and images using dedicated tools.
+
+3. Output Consistency
+
+The amount_safe_to_pay, affordability_status, payment_plan, earliest_date_for_full_payment, spending_changes_needed, and decision_explanation fields should all be derived from the same underlying validated plan.
+
+4. Flexible Expense Modeling
+
+Stop/reduce changes to flexible expenses should be modeled directly inside the financial forecast. The forecast should then be recomputed before determining the safe-to-pay amount and final status.
+
+5. Safety Under Uncertainty
+
+The system should explicitly define how missing or uncertain evidence is handled, including when assumptions are allowed and when the system should return an insufficient-evidence outcome.
+
+6. Reliability
+
+A future implementation should validate inputs early, validate model output structure, use bounded retries and fallbacks, and ensure that one failed request does not break the entire run.
+
+Engineering Takeaways
+
+Financial Decisions Require Forecasting: Current balance alone is insufficient when future income, pending transactions, recurring expenses, and minimum-balance requirements affect liquidity.
+
+Deterministic Tools and AI Agents Can Complement Each Other: Deterministic simulation is useful for enforcing financial constraints, while an agent can handle evidence extraction, uncertainty, tool selection, and candidate-plan generation.
+
+One Plan Should Drive the Final Output: Payment amounts, status, dates, spending changes, and explanations should all agree with the same underlying simulation result.
+
+Validation Should Be a Separate Safety Layer: Model-generated decisions should pass deterministic checks before reaching the final output.
+
+Explicit Specifications Improve AI-Assisted Development: Defining formulas, thresholds, invariants, tie-break rules, expected behavior, and failing cases before implementation reduces ambiguity during AI-assisted coding.
+
+Concrete Debugging Evidence Matters: Providing exact failing request IDs, incorrect fields, expected behavior, and observed output makes debugging more precise.
+
+
+Limitations
+
+The project was developed under a 24-hour hackathon constraint.
+
+The original challenge dataset is not included in this public repository.
+
+The submitted September 2026 implementation primarily uses deterministic planning and simulation rather than a fully model-driven agent loop.
+
+The system was designed for the challenge environment and has not been validated for real-world financial applications.
+
+Financial decisions can depend on information that is unavailable, incomplete, delayed, or incorrectly represented in the available data.
+
+
+Future Improvements
+
+Based on the post-submission feedback, a future version could introduce:
+
+Model-driven agent orchestration
+
+Dedicated evidence extraction tools
+
+Tool selection and tool-calling by the agent
+
+Candidate-plan generation by the model
+
+Deterministic simulation as a verification tool
+
+Explicit uncertainty and fallback policies
+
+Improved stop/reduce expense modeling
+
+End-to-end output consistency validation
+
+Stronger error handling and bounded retries
+
+More comprehensive regression tests
+
+Concrete monitoring signals and production tripwires
+
+
+The intended architecture would be:
+
+Model proposes
+      ↓
+Deterministic tools verify
+      ↓
+Validator enforces
+      ↓
+Structured output
+
+Disclaimer
+
+This project was developed as a hackathon submission for educational and demonstration purposes.
+
+It is not a financial advisory tool and should not be used for real-world financial decision-making.
+
+Author
+
+Rishabh Paira
+
+GitHub: @Rerishabh
+
+Project: HackerRank Orchestrate September 2026: Buy or Wait
+
+
+**This is the version I recommend you use now.** It documents what you actually built, your verified result, the leaderboard, and the post-hackathon feedback without claiming that the submitted code was more agentic than HackerRank's own review says it was. The internal repository links are also relative, so they work properly when the repository is browsed or cloned. 1
