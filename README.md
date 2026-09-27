@@ -98,27 +98,27 @@ Structured Output
 ```
 ### Key Decision Logic
 
-1. Reconstruct the Financial State
+1. **Reconstruct the Financial State**
 
 The system aggregates available financial information for each user, including current balance, minimum balance thresholds, recurring commitments, pending transactions, confirmed income, and user preferences.
 
 
-2. Forecast Future Cash Flow
+2. **Forecast Future Cash Flow**
 
 Affordability is evaluated across the forecast horizon. The system checks whether the projected balance remains above the required minimum balance.
 
 
-3. Protect Essential Spending
+3. **Protect Essential Spending**
 
 A purchase is not considered safe simply because sufficient funds exist today. Required financial commitments and essential recurring expenses must be considered before approving a purchase.
 
 
-4. Evaluate Payment Options
+4. **Evaluate Payment Options**
 
 When full payment is not immediately safe, the system evaluates alternatives such as partial payment, installment schedules, or delayed execution.
 
 
-5. Evaluate Flexible Spending Changes
+5. **Evaluate Flexible Spending Changes**
 
 When permitted flexible recurring expenses exist, the system can consider changes such as:
 
@@ -130,7 +130,7 @@ reduce_to:<event_id>:<amount>
 These changes can alter the future cash-flow trajectory and therefore affect affordability.
 
 
-6. Validate the Final Decision
+6. **Validate the Final Decision**
 
 A deterministic validation layer checks output constraints including amount bounds, payment schedules, date consistency, and output schema compliance.
 
