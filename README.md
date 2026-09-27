@@ -146,7 +146,7 @@ The primary generated file is output.csv.
 Each request produces one structured prediction row.
 
 **Required Columns**
-```
+
 - `request_id`  
   Unique identifier of the request.
 
@@ -170,7 +170,8 @@ Each request produces one structured prediction row.
 
 - `decision_explanation`  
   Explanation of the decision and relevant financial factors.
-```
+
+  
 ### Partial Payment Logic
 
 When partial payment is permitted and safe, the payment schedule contains exactly two payments formatted as:
