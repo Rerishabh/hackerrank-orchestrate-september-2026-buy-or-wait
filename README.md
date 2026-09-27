@@ -168,6 +168,7 @@ Example:
 
 Repository Structure
 
+```
 .
 ├── code/
 │   ├── main.py
@@ -181,16 +182,17 @@ Repository Structure
 ├── problem_statement.md
 ├── output.csv
 └── .gitignore
+```
 
-code/: Implementation of the financial decision engine, simulation pipeline, and execution scripts.
+**code/**: Implementation of the financial decision engine, simulation pipeline, and execution scripts.
 
-evaluation/usage_report.md: Model call counts, token usage, and execution cost documentation.
+**evaluation/usage_report.md**: Model call counts, token usage, and execution cost documentation.
 
-problem_statement.md: Challenge specification reference.
+**problem_statement.md**: Challenge specification reference.
 
-output.csv: Generated predictions produced by the engine.
+**output.csv**: Generated predictions produced by the engine.
 
-AGENTS.md and CLAUDE.md: AI-assisted development instructions and project guidelines.
+**AGENTS.md and CLAUDE.md**: AI-assisted development instructions and project guidelines.
 
 
 ### Dataset
