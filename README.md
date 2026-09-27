@@ -52,11 +52,7 @@ This project was developed for **HackerRank Orchestrate September 2026**, a 24-h
 
 The challenge started on **September 12, 2026 at 6:00 PM IST**. HackerRank describes Orchestrate as a challenge where participants submit their code, agent output, and AI chat transcript, followed by an AI Judge interview. 
 
-### Official Challenge
-
-[HackerRank Orchestrate September 2026](https://www.hackerrank.com/hackerrank-orchestrate-september26)
-
-### My Leaderboard Result
+## My Leaderboard Result
 
 [View My Buy or Wait Leaderboard Result](https://www.hackerrank.com/contests/hackerrank-orchestrate-september26/challenges/buy-or-wait/leaderboard?username=ap24110010666)
 
