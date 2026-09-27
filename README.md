@@ -122,10 +122,13 @@ When full payment is not immediately safe, the system evaluates alternatives suc
 
 When permitted flexible recurring expenses exist, the system can consider changes such as:
 
+```
 stop:<event_id>
+```
 
+```
 reduce_to:<event_id>:<amount>
-
+```
 
 These changes can alter the future cash-flow trajectory and therefore affect affordability.
 
