@@ -156,17 +156,17 @@ spending_changes_needed	Permitted changes to flexible recurring expenses
 decision_explanation	Explanation of the decision and relevant financial factors
 
 
-Partial Payment Logic
+### Partial Payment Logic
 
 When partial payment is permitted and safe, the payment schedule contains exactly two payments formatted as:
-
+```
 request_date:amount|earliest_date:amount
-
+```
 Example:
-
+```
 2026-09-12:5000|2026-09-25:7000
-
-Repository Structure
+```
+### Repository Structure
 
 ```
 .
@@ -184,15 +184,15 @@ Repository Structure
 └── .gitignore
 ```
 
-**code/**: Implementation of the financial decision engine, simulation pipeline, and execution scripts.
+- **code/**: Implementation of the financial decision engine, simulation pipeline, and execution scripts.
 
-**evaluation/usage_report.md**: Model call counts, token usage, and execution cost documentation.
+- **evaluation/usage_report.md**: Model call counts, token usage, and execution cost documentation.
 
-**problem_statement.md**: Challenge specification reference.
+- **problem_statement.md**: Challenge specification reference.
 
-**output.csv**: Generated predictions produced by the engine.
+- **output.csv**: Generated predictions produced by the engine.
 
-**AGENTS.md and CLAUDE.md**: AI-assisted development instructions and project guidelines.
+- **AGENTS.md and CLAUDE.md**: AI-assisted development instructions and project guidelines.
 
 
 ### Dataset
@@ -253,12 +253,12 @@ Total Score	 40.6 / 100
 ### Score Breakdown
 
 ```
-Component	           Score	Max Possible
+Component	            Score	  Max Possible
 
-Chat Transcript	 6.4	     10
-AI Judge Interview	 18.9	30
-Output CSV	      12.3	30
-Code ZIP  	      3.0	     30
+Chat Transcript	  6.4	      10
+AI Judge Interview	  18.9	      30
+Output CSV	       12.3	      30
+Code ZIP  	       3.0	      30
 ```
 
 Detailed execution metrics and model usage are available in evaluation/usage_report.md.
