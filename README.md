@@ -105,6 +105,8 @@ Deterministic Validation
      ▼
 Structured Output
 ```
+---
+
 ### Key Decision Logic
 
 1. **Reconstruct the Financial State**
@@ -147,6 +149,7 @@ These changes can alter the future cash-flow trajectory and therefore affect aff
 A deterministic validation layer checks output constraints including amount bounds, payment schedules, date consistency, and output schema compliance.
 
 
+---
 
 ### Output Format
 
@@ -180,7 +183,8 @@ Each request produces one structured prediction row.
 - `decision_explanation`  
   Explanation of the decision and relevant financial factors.
 
-  
+---
+
 ### Partial Payment Logic
 
 When partial payment is permitted and safe, the payment schedule contains exactly two payments formatted as:
@@ -191,6 +195,8 @@ Example:
 ```
 2026-09-12:5000|2026-09-25:7000
 ```
+---
+
 ### Repository Structure
 
 ```
@@ -219,6 +225,7 @@ Example:
 
 - **AGENTS.md and CLAUDE.md**: AI-assisted development instructions and project guidelines.
 
+---
 
 ### Dataset
 
@@ -229,6 +236,8 @@ The challenge data contained financial profiles, transaction histories, requests
 Raw dataset assets are maintained separately in a private backup repository for preservation purposes.
 
 This public repository contains the project implementation, documentation, evaluation reports, and generated output.
+
+---
 
 ### Running the Project
 
@@ -242,16 +251,23 @@ Predictions will be written to:
 ```
 output.csv
 ```
+
+---
+
 ### Environment Setup
 
 Create a virtual environment:
 ```
 python -m venv .venv
 ```
+---
+
 ### Windows
 ```
 .venv\Scripts\activate
 ```
+---
+
 ### macOS/Linux
 ```
 source .venv/bin/activate
@@ -260,11 +276,15 @@ Install the project's required dependencies according to its Python configuratio
 ```
 python code/main.py
 ```
+---
+
 ### Evaluation & Results
 
 The project was submitted to HackerRank Orchestrate September 2026.
 
 The final submission was evaluated across the submitted code, generated output, AI chat transcript, and AI Judge interview. HackerRank describes these as separate signals used to evaluate Orchestrate submissions.
+
+---
 
 ## Final Leaderboard Result
 
@@ -274,6 +294,8 @@ The final submission was evaluated across the submitted code, generated output, 
 | **Total Score** | **40.6 / 100** |
 
 [View the HackerRank Leaderboard](https://www.hackerrank.com/contests/hackerrank-orchestrate-september26/challenges/buy-or-wait/leaderboard?username=ap24110010666)
+
+---
 
 ## Score Breakdown
 
@@ -286,6 +308,7 @@ The final submission was evaluated across the submitted code, generated output, 
 
 Detailed execution metrics and model usage are available in [evaluation/usage_report.md](evaluation/usage_report.md).
 
+---
 
 ### HackerRank Post-Submission Feedback
 
@@ -341,6 +364,8 @@ Safety Validation
 Consistent Structured Output
 ```
 
+---
+
 ### Key Feedback Themes
 
 1. **Model-Driven Decision Making**
@@ -367,6 +392,8 @@ The system should explicitly define how missing or uncertain evidence is handled
 
 A future implementation should validate inputs early, validate model output structure, use bounded retries and fallbacks, and ensure that one failed request does not break the entire run.
 
+---
+
 ### Engineering Takeaways
 
 - **Financial Decisions Require Forecasting**: Current balance alone is insufficient when future income, pending transactions, recurring expenses, and minimum-balance requirements affect liquidity.
@@ -382,6 +409,8 @@ A future implementation should validate inputs early, validate model output stru
 - **Concrete Debugging Evidence Matters**: Providing exact failing request IDs, incorrect fields, expected behavior, and observed output makes debugging more precise.
 
 
+---
+
 ### Limitations
 
 - The project was developed under a 24-hour hackathon constraint.
@@ -394,6 +423,8 @@ A future implementation should validate inputs early, validate model output stru
 
 - Financial decisions can depend on information that is unavailable, incomplete, delayed, or incorrectly represented in    the available data.
 
+
+---
 
 ### Future Improvements
 
@@ -433,6 +464,8 @@ Validator enforces
       ↓
 Structured output
 ```
+
+---
 
 ### Disclaimer
 
