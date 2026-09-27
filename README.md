@@ -277,7 +277,6 @@ The final submission was evaluated across the submitted code, generated output, 
 
 Detailed execution metrics and model usage are available in [evaluation/usage_report.md](evaluation/usage_report.md).
 
-Detailed execution metrics and model usage are available in evaluation/usage_report.md.
 
 ### HackerRank Post-Submission Feedback
 
