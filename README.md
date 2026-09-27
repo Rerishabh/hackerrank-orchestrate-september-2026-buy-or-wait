@@ -345,17 +345,17 @@ A future implementation should validate inputs early, validate model output stru
 
 ### Engineering Takeaways
 
-**Financial Decisions Require Forecasting**: Current balance alone is insufficient when future income, pending transactions, recurring expenses, and minimum-balance requirements affect liquidity.
+- **Financial Decisions Require Forecasting**: Current balance alone is insufficient when future income, pending transactions, recurring expenses, and minimum-balance requirements affect liquidity.
 
-**Deterministic Tools and AI Agents Can Complement Each Other**: Deterministic simulation is useful for enforcing financial constraints, while an agent can handle evidence extraction, uncertainty, tool selection, and candidate-plan generation.
+- **Deterministic Tools and AI Agents Can Complement Each Other**: Deterministic simulation is useful for enforcing financial constraints, while an agent can handle evidence extraction, uncertainty, tool selection, and candidate-plan generation.
 
-**One Plan Should Drive the Final Output**: Payment amounts, status, dates, spending changes, and explanations should all agree with the same underlying simulation result.
+- **One Plan Should Drive the Final Output**: Payment amounts, status, dates, spending changes, and explanations should all agree with the same underlying simulation result.
 
-**Validation Should Be a Separate Safety Layer**: Model-generated decisions should pass deterministic checks before reaching the final output.
+- **Validation Should Be a Separate Safety Layer**: Model-generated decisions should pass deterministic checks before reaching the final output.
 
-**Explicit Specifications Improve AI-Assisted Development**: Defining formulas, thresholds, invariants, tie-break rules, expected behavior, and failing cases before implementation reduces ambiguity during AI-assisted coding.
+- **Explicit Specifications Improve AI-Assisted Development**: Defining formulas, thresholds, invariants, tie-break rules, expected behavior, and failing cases before implementation reduces ambiguity during AI-assisted coding.
 
-**Concrete Debugging Evidence Matters**: Providing exact failing request IDs, incorrect fields, expected behavior, and observed output makes debugging more precise.
+- **Concrete Debugging Evidence Matters**: Providing exact failing request IDs, incorrect fields, expected behavior, and observed output makes debugging more precise.
 
 
 ### Limitations
@@ -373,27 +373,27 @@ Financial decisions can depend on information that is unavailable, incomplete, d
 
 ### Future Improvements
 
--Based on the post-submission feedback, a future version could introduce:
+- Based on the post-submission feedback, a future version could introduce:
 
--Model-driven agent orchestration
+- Model-driven agent orchestration
 
--Dedicated evidence extraction tools
+- Dedicated evidence extraction tools
 
--Tool selection and tool-calling by the agent
+- Tool selection and tool-calling by the agent
 
--Candidate-plan generation by the model
+- Candidate-plan generation by the model
 
--Deterministic simulation as a verification tool
+- Deterministic simulation as a verification tool
 
--Explicit uncertainty and fallback policies
+- Explicit uncertainty and fallback policies
 
--Improved stop/reduce expense modeling
+- Improved stop/reduce expense modeling
 
--End-to-end output consistency validation
+- End-to-end output consistency validation
 
--Stronger error handling and bounded retries
+- Stronger error handling and bounded retries
 
--More comprehensive regression tests
+- More comprehensive regression tests
 
 Concrete monitoring signals and production tripwires
 
