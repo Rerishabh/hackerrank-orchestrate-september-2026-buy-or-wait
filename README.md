@@ -203,7 +203,7 @@ Raw dataset assets are maintained separately in a private backup repository for 
 
 This public repository contains the project implementation, documentation, evaluation reports, and generated output.
 
-Running the Project
+### Running the Project
 
 The solution expects the challenge dataset to be available locally in a dataset/ directory.
 
@@ -215,7 +215,7 @@ Predictions will be written to:
 
 output.csv
 
-Environment Setup
+### Environment Setup
 
 Create a virtual environment:
 
@@ -233,39 +233,41 @@ Install the project's required dependencies according to its Python configuratio
 
 python code/main.py
 
-Evaluation & Results
+### Evaluation & Results
 
 The project was submitted to HackerRank Orchestrate September 2026.
 
 The final submission was evaluated across the submitted code, generated output, AI chat transcript, and AI Judge interview. HackerRank describes these as separate signals used to evaluate Orchestrate submissions.
 
-Final Leaderboard Result
+### Final Leaderboard Result
 
-Metric	Result
+Metric	     Result
 
 Final Rank	#1504 / 3,062
-Total Score	40.6 / 100
+Total Score	 40.6 / 100
 
 
 View the HackerRank Leaderboard
 
-Score Breakdown
+### Score Breakdown
 
-Component	Score	Max Possible
+Component	           Score	Max Possible
 
-Chat Transcript	6.4	10
-AI Judge Interview	18.9	30
-Output CSV	12.3	30
-Code ZIP	3.0	30
+Chat Transcript	 6.4	     10
+AI Judge Interview	 18.9	30
+Output CSV	      12.3	30
+Code ZIP  	      3.0	     30
 
 
 Detailed execution metrics and model usage are available in evaluation/usage_report.md.
 
-HackerRank Post-Submission Feedback
+### HackerRank Post-Submission Feedback
 
 HackerRank provided detailed feedback after evaluating the submission.
 
+
 The main architectural feedback was that the submitted implementation was primarily a deterministic solver, rather than a model-driven agent.
+
 
 HackerRank recommended keeping the existing deterministic loader, planner, and simulator as tools, while adding an agent loop capable of:
 
