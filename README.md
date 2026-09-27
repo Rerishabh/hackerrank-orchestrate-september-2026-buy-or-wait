@@ -373,27 +373,27 @@ Financial decisions can depend on information that is unavailable, incomplete, d
 
 ### Future Improvements
 
-Based on the post-submission feedback, a future version could introduce:
+-Based on the post-submission feedback, a future version could introduce:
 
-Model-driven agent orchestration
+-Model-driven agent orchestration
 
-Dedicated evidence extraction tools
+-Dedicated evidence extraction tools
 
-Tool selection and tool-calling by the agent
+-Tool selection and tool-calling by the agent
 
-Candidate-plan generation by the model
+-Candidate-plan generation by the model
 
-Deterministic simulation as a verification tool
+-Deterministic simulation as a verification tool
 
-Explicit uncertainty and fallback policies
+-Explicit uncertainty and fallback policies
 
-Improved stop/reduce expense modeling
+-Improved stop/reduce expense modeling
 
-End-to-end output consistency validation
+-End-to-end output consistency validation
 
-Stronger error handling and bounded retries
+-Stronger error handling and bounded retries
 
-More comprehensive regression tests
+-More comprehensive regression tests
 
 Concrete monitoring signals and production tripwires
 
