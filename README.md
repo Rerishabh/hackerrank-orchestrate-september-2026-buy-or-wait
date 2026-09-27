@@ -3,6 +3,9 @@
 [![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
 [![HackerRank](https://img.shields.io/badge/HackerRank-Orchestrate-green)](https://www.hackerrank.com/hackerrank-orchestrate-september26)
 
+
+![HackerRank Orchestrate September 2026](IMG_20260927_232605.jpg)
+
 > Financial affordability decision engine built for the HackerRank Orchestrate September 2026 24-hour hackathon. The system reconstructs a user's financial state, forecasts future cash flow, evaluates payment options, and produces a structured affordability decision.
 
 ## Overview
