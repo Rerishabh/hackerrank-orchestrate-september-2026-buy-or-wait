@@ -200,7 +200,7 @@ Example:
 
 - **evaluation/usage_report.md**: Model call counts, token usage, and execution cost documentation.
 
-- **problem_statement.md**: Challenge specification reference.
+- **[problem_statement.md](problem_statement.md):** Challenge specification reference.
 
 - **output.csv**: Generated predictions produced by the engine.
 
