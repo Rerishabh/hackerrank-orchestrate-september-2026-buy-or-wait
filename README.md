@@ -96,7 +96,7 @@ Deterministic Validation
      ▼
 Structured Output
 ```
-Key Decision Logic
+###Key Decision Logic
 
 1. Reconstruct the Financial State
 
