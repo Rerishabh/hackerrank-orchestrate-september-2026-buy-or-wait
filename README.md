@@ -8,6 +8,8 @@
 
 > Financial affordability decision engine built for the HackerRank Orchestrate September 2026 24-hour hackathon. The system reconstructs a user's financial state, forecasts future cash flow, evaluates payment options, and produces a structured affordability decision.
 
+---
+
 ## Overview
 
 A simple question such as:
@@ -32,6 +34,8 @@ A reliable affordability decision can depend on:
 
 The system combines these financial factors to produce a structured affordability decision.
 
+---
+
 ### Decision Categories
 
 **Affordability Status**
@@ -49,15 +53,21 @@ The system combines these financial factors to produce a structured affordabilit
 - `wait`
 - `not_recommended`
 
+---
+
 ## Challenge
 
 This project was developed for **HackerRank Orchestrate September 2026**, a 24-hour hackathon focused on designing, building, and shipping an AI agent.
 
 The challenge started on **September 12, 2026 at 6:00 PM IST**. HackerRank describes Orchestrate as a challenge where participants submit their code, agent output, and AI chat transcript, followed by an AI Judge interview. 
 
+---
+
 ## My Leaderboard Result
 
 [View My Buy or Wait Leaderboard Result](https://www.hackerrank.com/contests/hackerrank-orchestrate-september26/challenges/buy-or-wait/leaderboard?username=ap24110010666)
+
+---
 
 ## Approach
 
