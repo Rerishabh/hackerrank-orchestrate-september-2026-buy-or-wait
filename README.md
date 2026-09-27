@@ -287,6 +287,7 @@ HackerRank recommended keeping the existing deterministic loader, planner, and s
 
 The recommended architecture can therefore be summarized as:
 
+```
 Financial Inputs
        │
        ▼
@@ -310,6 +311,7 @@ Safety Validation
        │
        ▼
 Consistent Structured Output
+```
 
 ### Key Feedback Themes
 
