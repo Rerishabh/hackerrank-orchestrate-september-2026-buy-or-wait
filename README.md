@@ -256,7 +256,7 @@ Total Score	 40.6 / 100
 ### Score Breakdown
 
 ```
-Component	            Score	  Max Possible
+Component	            Score	      Max Possible
 
 Chat Transcript	  6.4	      10
 AI Judge Interview	  18.9	      30
